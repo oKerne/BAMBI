@@ -1,0 +1,827 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary_color: #9CCACA;
+  --color_text: #36465B;
+  --color-neutral: #f0f0f0;
+  --font: Sans-serif;
+  --font-big: 'Times New Roman', Times, serif;
+  --size: 20px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  color: var(--color_text);
+  font-family: var(--font);
+  padding-top: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  position: fixed;
+  padding: 1px;
+  background-color: #f9f9f9;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+header .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+header img {
+  width: 120px;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  font-size: 1.2em;
+  transform: scale(1);
+  transition: 4ms;
+  color: var(--font);
+  text-decoration: none;
+  margin-right: 12px;
+  padding: 12px;
+  position: relative;
+  font-size: var(--size);
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+#list-header {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#list-header li:hover .submenu {
+  display: flex;
+  flex-direction: column;
+
+}
+ #search-bar {
+ border: 1px solid #ccc; 
+}  
+#search-bar:hover {
+background-color: white;
+border: none;
+}
+
+#search-button {
+   border: none;
+   color: white;  background-color: var(--primary_color);
+  }
+.submenu {
+  display: none;
+  position: absolute;
+  background: rgba(94, 170, 189, 0.5);
+  list-style: none;
+  row-gap: 10px;
+}
+.submenu a:hover {
+  color: var(--color-neutral);
+}
+#header-none {
+  display: none;
+  list-style: none;
+}
+#header-none ul {
+  list-style: none;
+}
+
+#header-none li a:hover {
+  color: var(--primary_color);
+}
+
+.hamburger {
+  display: none;
+}
+
+.tenants_button {
+  display: block;
+  padding: 10px 15px;
+  background-color: var(--primary_color);
+  border: none;
+  color: var(--color_text);
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 180px;
+  height: 50px;
+
+}
+
+.tenants_button:hover .button-text:after {
+  opacity: 1;
+  margin-left: 15px;
+  animation: leftarrow 0.4s ease infinite alternate;
+}
+
+.tenants_button .button-text:after {
+  content: ">>";
+  font-weight: 500;
+  position: relative;
+  opacity: 0;
+  transition: 0.2s all;
+}
+
+@keyframes leftarrow {
+  0% {
+    left: 2px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+
+.titel-big {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  font-family: var(--font-big);
+  font-size: 11rem;
+  line-height: 150;
+  width: 100%;
+  line-height: 1px;
+}
+
+/* ----------main------------- */
+main {
+  margin-bottom: 100px;
+}
+
+#titel-big-home {
+  margin-top: 12px;
+
+}
+#titel-big-home span {
+  animation: change-text-color infinite alternate 3s;
+}
+
+@keyframes change-text-color {
+  0%, 49.9% {
+      color: var(--primary_color);
+  }
+
+  50%, 100% {
+      color: #CFB287;
+  }
+}
+
+.container-Primary {
+  background-image: url('../imges/new.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-color: #232E38;
+  width: 100%;
+  height: 900px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  color: var(--color-neutral);
+  background-blend-mode: multiply;
+}
+
+.bambi-new {
+  font-family: var(--font);
+  font-size: 50px;
+
+}
+#JerusalemRenewal {
+  display: flex;
+  justify-content: center;
+  margin-right: 180px;
+  flex: 1;
+  flex-direction: column;
+  row-gap: 8px;
+
+}
+
+.element {
+  width: 60%;
+}
+
+.new_imge {
+  width: 80%;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.new_imge:hover {
+  transform: scale(1.1);
+}
+
+.container-wraps-advent {
+  margin-bottom: 150px;
+}
+
+.titel-advent {
+  font-family: var(--font);
+  font-size: 56px;
+  color: #CFB287;
+  margin-bottom: 100px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+
+.titel-advent:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.advantages {
+  position: absolute;
+}
+
+#secondary-title {
+  position: relative;
+  display: inline-block;
+}
+
+#secondary-title::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary_color);
+  border-radius: 50%;
+  margin-right: 20px;
+  z-index: -1;
+}
+
+.box-advant {
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#titel-bambi {
+  position: absolute;
+}
+
+footer {
+  background-color: var(--primary_color);
+  text-align: center;
+  display: flex;
+  margin-top: auto;
+}
+
+footer>.row:first-child {
+  width: 100%;
+}
+
+.image_footer img {
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.image_footer :hover img {
+  transform: scale(1.1);
+}
+
+.titel-footer {
+
+  margin-top: 55px;
+  padding: 12px;
+  font-size: 24px;
+}
+
+div#input-footer {
+  display: flex;
+
+}
+
+.wrap_inputs {
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+#input {
+  max-width: 40%;
+  padding: 9px 6px;
+  font-size: 12px;
+  border: none;
+  transition: background-color 0.3s;
+
+}
+
+input:hover {
+  background-color: #e8f0fe;
+}
+
+#arrow-button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary_color);
+
+
+}
+
+.button_text {
+  background-color: #5A9D9D;
+  color: var(--color_text);
+  font-family: var(--font);
+  height: 100%;
+}
+
+#arrow-button:hover {
+  animation: leftarrow 0.2s ease;
+  background-color: transparent;
+  background-color: #5A9D9D;
+  width: 20%;
+}
+
+.arrow-icon {
+  width: 40px;
+  height: 40px;
+  color:var(--color-neutral);
+}
+
+.icon-list {
+  font-size: large;
+  list-style: none;
+  padding: 7px;
+  margin: 15px;
+  align-items: center;
+}
+
+ul a {
+  text-decoration: none;
+  color: var(--color_text);
+  font-size: 18px;
+}
+
+
+/* about_as */
+
+#titel-about-us {
+  margin-bottom: 100px;
+}
+
+ .title-color span {
+   animation: colorChange infinite alternate 3s;
+ }
+
+@keyframes colorChange {
+  0%, 49.9% {
+       color: var(--color_text);
+  }
+
+  50%, 100% {
+     color: var(--primary_color); 
+  }
+ 
+} 
+.about-society {
+  padding-top: 8px;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+}
+
+
+/* project */
+.project {
+  font-family: var(--font);
+  font-size: 10rem;
+  line-height: 1px;
+}
+
+#title-project {
+  margin-bottom: 100px;
+  color: var(--primary_color);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+
+.image-project {
+  position: relative;
+  display: inline-block;
+
+}
+
+.image-project :before {
+  content: 'אוכלס';
+  background-color: white;
+  color: #333;
+  position: absolute;
+  padding: 5px;
+  margin-left: 27px;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  line-height: 1;
+}
+/*   popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width:30.30% ;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+  z-index: 1000;
+  overflow-y: auto;
+} 
+/* X - לסגירת החלון */
+.close { 
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 12px;
+  height: 12px;
+  background: black;
+  color: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* רקע אפור */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+/* צור קשר */
+.main-empty {
+  min-height: 25vh;
+}
+.recommendation-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 20px auto;
+  height: 200px;
+}
+
+.recommendation {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: scale(0.95);
+}
+
+.recommendation.active {
+  left: 0;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.recommendation.exit {
+  left: -100%;
+  opacity: 0;
+  transform: scale(0.95);
+}
+.recommendation h3 {
+  margin: 0;
+  font-size: 1.6em;
+  color: #333;
+  color:#062d58;
+}
+.recommendation p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+  color: #6a819e;
+}
+
+/* כניסת דיירים */
+.container-tenant {
+  background-color: var(--color_text);
+  background-blend-mode: multiply;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  color: var(--color-neutral);
+  min-width: 60%;
+}
+#input-text{
+  padding-top: 12px;
+  margin: 4px;
+}
+#input-name{
+margin-bottom: 7px;
+}
+#input-last-name{
+  margin-bottom: 7px;
+}
+#input-password{
+  margin-bottom: 7px;
+}
+.container-tenant>:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container-tenant>:nth-child(2) {
+  --bs-gutter-y: 10px;
+}
+
+@media (max-width: 1500px) {
+  .titel-big {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .titel-big {
+    font-size: 7rem;
+  }
+
+  .container-Primary>.row:first-child {
+    justify-content: center;
+    --bs-gutter-y: 20px;
+  }
+
+  #JerusalemRenewal {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .titel-big {
+    font-size: 6rem;
+  
+  }
+  #search-bar{
+    display: none;
+  }
+#search-button{
+  display: none;
+}
+  .col-md-4,
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .col-md-4 {
+    order: 2;
+  }
+
+  .col-md-6 {
+    order: 1;
+  }
+
+  #JerusalemRenewal {
+    margin-right: 30px;
+
+  }
+
+  .bambi-new {
+    font-size: 30px;
+  }
+
+  .new_imge {
+    max-width: 872px; 
+    /* margin-left: 30px;  */
+  }
+
+  #JerusalemRenewal>:first-letter {
+    width: 40px;
+  }
+
+  .element {
+    width: 250px;
+  }
+
+  #secondary-title::before {
+    top: 12px;
+    /* margin-right: 7px; */
+  }
+
+  .image-project {
+
+    width: 69%;
+    margin-right: 15%;
+   
+  }
+  .image-project h4{
+    font-size: 18px;
+  }
+  
+}
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 5rem;
+    justify-content: center;
+    padding: 10px;
+    height: 120px;
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    z-index: 100
+  }
+
+  header img {
+    width: 100px;
+    height: 60px;
+  }
+
+  .tenants_button {
+    width: 90px;
+    height: 60px;
+
+  }
+
+  .hamburger {
+    position: relative;
+    display: none;
+  }
+
+  .hamburger {
+
+    display: block;
+
+  }
+
+  .hamburger:hover #header-none {
+    display: flex;
+
+  }
+
+  #list-header {
+
+    display: none;
+  }
+
+  .moblie a {
+    text-align: center;
+  }
+
+  #header-none {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #f9f9f9;
+    padding: 0px;
+    margin: 0;
+    width: 192px;
+    height: 158px;
+    right: -98px;
+    margin-top: 34px;
+  }
+
+  .header-moblie li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titel-big {
+    font-size: 4rem;
+  }
+
+  .container-Primary {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 40px;
+  }
+
+  .container-tenant input {
+    font-size: 20px;
+  }
+
+  #titel-bambi {
+    font-size: 2rem;
+    margin-top: 20px;
+
+  }
+
+  .wrap_inputs {
+    justify-content: center;
+  }
+
+  #input {
+    max-width: 40%;
+  }
+
+  .imge_footer {
+    width: 600px;
+  }
+
+  footer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titel-footer {
+    padding: 12px;
+    font-size: 24px;
+  }
+}
+
+@media(max-width:576px) {
+
+  #JerusalemRenewal {
+    font-size: 20px;
+  }
+  .element {
+
+    width: 200px;
+  }
+
+  .bambi-new {
+    font-size: 20px;
+  }
+   .titel-big {
+    font-size: 30px
+  }
+
+  #titel-bambi {
+    font-size: 60px;
+    line-height: 1px;
+  }
+.titel-advent{
+  font-size: 40px;
+}
+}
